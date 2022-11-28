@@ -11,7 +11,7 @@ app.use(bodyParser.json({ extended: true }));
 
 app.post('/api/webhook', ((req, res) => {
   try {
-    console.log(req.body)
+    console.log(req.body.content.invoice.linked_payments)
     res.status(200).json("good")
   } catch (error) {
     console.log(error)
